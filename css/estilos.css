@@ -1,0 +1,239 @@
+/* Hoja de estilos de sofware de inventario*/
+
+/*variables de marca es decir las genrales*/
+:root { /*es la raiz del documento las variables declaradas aqui sirven para toda la pagina*/
+    --sena-verde: #3eac07;/*toda variable inicia con -- el color esta en hexadecimal pero puede colocar en texto*/  
+    --sena-azul: #058170; 
+    --sena-verde-oscuro: #2e9700;  
+    --sidebar-ancho: 250px/*ancho menu lateral px es la unidad de medida de css*/
+} 
+
+/* variables generales estilos que aplican a todos las paginas*/
+
+body{/*afecta todo el cuerpo de la pagina*/
+    margin: 0; /*quita la margen que el navegador tiene por defecto*/
+    font-family: "segoe UI", Roboto,Arial, sans-serif;/*tipos de letra si no existe pasa a la siguiente*/
+}
+
+.texto-sena {
+    color: var(--sena-verde);
+}
+
+.btn-sena{
+    /*color de fondo*/
+    --bs-btn-bg: var(--sena-verde);
+    /*color del borde*/
+    --bs-btn-border-color: var(var(--sena-verde));
+    /*texto con el mouse arriba*/
+    --bs-btn-hover-color: #fff;
+    /*fondo con el mouse encima*/
+    --bs-btn-hover-bg: var(var(--sena-verde-oscuro));
+    /*borde con le mouse encima*/
+    --bs-btn--border-color: var(var(--sena-verde-oscuro));
+    /*texto mientras se la hace clic*/
+    --bs--btn--active-color: #fff;
+    /*fondo mientras hace clic*/
+    --bs--btn--active-bg: var(var(--sena-verde-oscuro));
+    /*borde mientras se hace clic*/
+    --bs-btn-active-border-color: var(var(--sena-verde-oscuro))
+    /*cierra la regla*/
+}
+
+/*la coma aplica la misma regla a varios selectores: los campos con el foco*/
+.form-control:focus, 
+/*las listas desplegables con foco*/
+.form-select:focus,
+/*y las casillas con foco*/
+.form-check-input-.focus{
+/*borde verde en lugar del azul de bootstrap*/
+border-color: var(--sena-verde);
+/*halo verde translucido al rededor del campo*/
+box-shadow: 0 0 0. 25rem rgba(57, 169, 0, .25);
+/*cierre de la regla*/
+}
+
+/*casilla  o interructor marcado*/
+.form-check-input:checked {
+    /*relleno verde*/
+    background-color: var(--sena-verde);
+    /*borde verde*/
+    border-color: var(--sena-verde);
+    /*cierra la regla*/
+}
+
+/*login y registro*/
+/*fondo de pantalla*/
+.login-fondo {
+    /*alto minimo de toda la ventana*/
+    min-height: 100vh;
+    /*flexbox*/
+    display:flex;
+    /*centrado vertical*/
+    align-items: center;
+    justify-content: center;
+    /*relleno en celular*/
+    padding: 1rem;
+    /*el padding no suma la alto*/
+    box-sizing: border-box;
+    /*degradado azul-verde*/
+    background: linear-gradient(135deg, var(--sena-azul), var(--sena-verde));
+    /*cierra la regla*/
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    box-sizing: border-box;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0.25);
+}
+
+
+.login-car.ancha {
+    max-width: 680px;
+}
+
+
+.login-encabezado {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.login-encabezado h1 {
+    color: var(--sena-azul);
+    margin: 0.25rem 0;
+}
+
+
+.login-pie {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin: 1.25rem 0 0;
+}
+
+
+.sidebar {
+    background-color: var(--sena-azul) !important;
+    color: #ffffff;
+}
+
+
+.sidebar .nav-link {
+    color: rgba(255,255,255,0.75);
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+
+.sidebar .nav-link:hover {
+    color: #ffffff ;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.sidebar .nav-link:active {
+    color: #ffffff;
+    background-color: var(--sena-verde);
+}
+
+
+@media (min-width:992px) {
+    .sidebar{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: var(--sider-ancho);        
+    }
+    .sidebar .offcanvas-body {
+        height: 100%;
+        overflow-y: auto;
+    }
+
+
+    .contenido {
+        margin-left: var(--sider-ancho);
+    }
+}
+
+
+.tarjetas-kpi {
+    border: 0;
+    border-left: 4px solid var(--sena-verde);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.tarjetas-kpi:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem rgba(0, 0, 0, 0.12) !important;
+}
+
+
+.icon-kpi {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    font-size: 1.5rem
+    ;
+}
+
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+
+.pagination {
+    --bs-pagination-color: var(var(--sena-azul));
+    --bs-pagination-bg: var(var(--sena-verde));
+    --bs-pagination-active-border-color: var(var(--sena-verde));
+}
+
+
+.tarjeta-agregar {
+    border: 2px dashed #ced4da;
+    background-color: transparent;
+    color: #6c757d;
+    min-height: 200px;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+
+.tarjeta-agregar:hover {
+    border-color: var(--sena-verde);
+    color: var(--sena-verde);
+}
+
+
+.miniatura {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    background-color: #eef2f5;
+    color: var(--sena-azul);
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+
+.list-group {
+    --bs-list-group-active-bg: var(var(--sena-verde));
+    --bs-list-group-active-border-color: var(var(--sena-verde));
+}
+
