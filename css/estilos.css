@@ -20,22 +20,23 @@ body{/*afecta todo el cuerpo de la pagina*/
 }
 
 .btn-sena{
+    --bs-btn-color: var(--sena-azul);
     /*color de fondo*/
     --bs-btn-bg: var(--sena-verde);
     /*color del borde*/
-    --bs-btn-border-color: var(var(--sena-verde));
+    --bs-btn-border-color: var(--sena-verde);
     /*texto con el mouse arriba*/
     --bs-btn-hover-color: #fff;
     /*fondo con el mouse encima*/
-    --bs-btn-hover-bg: var(var(--sena-verde-oscuro));
+    --bs-btn-hover-bg: var(--sena-verde-oscuro);
     /*borde con le mouse encima*/
-    --bs-btn--border-color: var(var(--sena-verde-oscuro));
+    --bs-btn--border-color: var(--sena-verde-oscuro);
     /*texto mientras se la hace clic*/
     --bs--btn--active-color: #fff;
     /*fondo mientras hace clic*/
-    --bs--btn--active-bg: var(var(--sena-verde-oscuro));
+    --bs--btn--active-bg: var(--sena-verde-oscuro);
     /*borde mientras se hace clic*/
-    --bs-btn-active-border-color: var(var(--sena-verde-oscuro))
+    --bs-btn-active-border-color: var(--sena-verde-oscuro)
     /*cierra la regla*/
 }
 
