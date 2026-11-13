@@ -3,7 +3,7 @@
 /*variables de marca es decir las genrales*/
 :root { /*es la raiz del documento las variables declaradas aqui sirven para toda la pagina*/
     --sena-verde: #3eac07;/*toda variable inicia con -- el color esta en hexadecimal pero puede colocar en texto*/  
-    --sena-azul: #058170; 
+    --sena-azul: #05545f; 
     --sena-verde-oscuro: #2e9700;  
     --sidebar-ancho: 250px/*ancho menu lateral px es la unidad de medida de css*/
 } 
