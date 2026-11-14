@@ -1,41 +1,57 @@
 <!DOCTYPE html>
-
-<html lang="es"><!--lang = hace referencia al idioma, meta viewport hace que se acomode automaticamente la paigna a la pantalla-->
+<html lang="es"> <!-- lang hace referencia al idioma; meta viewport hace que se acomode automáticamente la página a la pantalla -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar secion inventario ADSO</title>
-    <!--CSS de bootstrap 5.3.3 desde url predeterminada-->
+    <title>Iniciar sesión inventario ADSO</title>
+    <!-- CSS de Bootstrap 5.3.3 desde URL predeterminada -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"  rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet"><!--llama los estilos personalizados--> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet"> <!-- Llama los estilos personalizados --> 
 </head>
 <body class="bg-body-tertiary">
-    <!--menu lateral-->
-    <!--offcanvas en pantallas menores al lg es un panel oculto que se deslizas-->
-    <!--desde el lg se muestra normal. offcanvas-starts lo que hace salir por la izaquierda .sidebar es muestra la clase el id usa el boton q lo abre-->
 
-    <aside class="offclass-lg offcanvas-start sidebar"
-    tabindex="-1" id="menuLateral" arial-labelledby="tituloMenu">
-     <!--Encabezado del panel; bootstrap solo lo muestra en celular-->
-     <div class="offcanvas-header border-bottom border-secondary">
-        <!--Nombre del sistema en el panel movil-->
-        <h5 class="offcanvas-title" id="tituloMenu"><i class="bi bi-shop me-2"></i>Tienda sena</h5>
-        <!--Boton x blanco de cierrre del panel-->
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#menuLateral" 
-        arial-label="Cerrar menu"></button>
-        <!--Cierra el encabezado movil-->
-     </div>
-     <!--Cuerpo del menu flexbox en columan para apilar logo enlaces y boton de salida-->
-     <div class="offcanvas-body d-flex-column p-3">
-        <!--logo que solo se ve en computador-->
-        <a href="dashboard.html" class="d-none d-lg-flex align-items-center mb-3 text-white text-decoration-none fs-5 fw-bold">
-            <!--icono verde y nombre-->
-            <i class="bi bi-shop me-2 text-sena">Tienda sena</i>
-            <!--cierra logo-->
-        </a>
-     </div>
+    <!-- Menú lateral -->
+    <!-- offcanvas en pantallas menores al lg es un panel oculto que se desliza. Desde lg se muestra normal. offcanvas-start hace que salga por la izquierda. .sidebar muestra los estilos y el ID se vincula con el botón que lo abre -->
+    <aside class="offcanvas-lg offcanvas-start sidebar" tabindex="-1" id="menuLateral" aria-labelledby="tituloMenu">
+        
+        <!-- Encabezado del panel; Bootstrap solo lo muestra en celular -->
+        <div class="offcanvas-header border-bottom border-secondary">
+            <!-- Nombre del sistema en el panel móvil -->
+            <h5 class="offcanvas-title" id="tituloMenu">
+                <i class="bi bi-shop me-2" ></i>Tienda sena
+            </h5>
+            <!-- Botón X blanco de cierre del panel -->
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#menuLateral" aria-label="Cerrar menú"></button>
+        </div>
+
+        <!-- Cuerpo del menú: flexbox en columna para apilar logo, enlaces y botón de salida -->
+        <div class="offcanvas-body d-flex flex-column p-3">
+            <!-- Logo que solo se ve en computador -->
+            <a href="dashboard.html" class="d-none d-lg-flex align-items-center mb-3 text-white text-decoration-none fs-5 fw-bold">
+                <!-- Icono verde y nombre separados semánticamente -->
+                <i class="bi bi-shop me-2 text-sena"></i>Tienda sena
+            </a>
+            <!--lista de navegacion en columna (flex-column) .nav-pills da forma de pildora al enlace activo mb-auto empuja lo que sigue hasta el fondo-->
+            <ul class="nav nav-pills flex-column mb-auto">
+                <!--Enlace al dashboard active lo que resalta en verde y aria-current="page" avisa a los lectores de pantalla que es la pagina 
+                actual en cada modulo el active pasa su propio enlace-->
+                <li calss="nav-item"><a href="dashboard.html" class="nav-link active" aria-current="page"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
+                <!--Enlace a modulo usarios-->
+                <li calss="nav-item"><a href="usuarios.html" class="nav-link"><i class="bi bi-people me-2"></i>Usuarios</a></li>
+                <!--enlace modulo categoria-->
+                <li calss="nav-item"><a href="categorias.html" class="nav-link"><i class="bi bi-tags me-2"></i>Categorias</a></li>
+                <!--subcategorias-->
+                <li calss="nav-item"><a href="subcategorias.html" class="nav-link"><i class="bi bi-diagram-3 me-2"></i>subcategorias</a></li>
+                <!--Productos-->
+                <li calss="nav-item"><a href="productos.html" class="nav-link"><i class="bi bi-box-seam me-2"></i>Productos</a></li>
+            </ul>
+            <hr>
+            <!--boton que vuelve al login asi se cierra la secion-->
+            <a href="index.html" class="btn btn-outline-light btn-sm"><i class="bi bi-box-arrow-left me-1"></i>Cerrar sesion</a>
+        </div>
 
     </aside>
+
 </body>
 </html>
